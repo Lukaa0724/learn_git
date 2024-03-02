@@ -17,64 +17,86 @@ remember some instructions.
 And I summarized what I learned.
 
 > git add 'file'
+
 添加文件到缓冲区
 > git commit -m " XXX "
+
 提交文件 -m的意思是message
 > git status
+
 查看当前状态
 > git diff
+
 查看现在的文件和上一次commit的文件的区别
 
 > git log
+
 查看提交历史
 > git log --pretty=oneline --abbrev-commit
+
 每一条历史占据一行 并且缩写commit id
 > git reset --hard "commit id"
+
 版本回退 其中的commit id可以写成"HEAD ^^^"或者"HEAD~100" 表示回退到前100个版本
 > git reflog 
+
 回退后查看未来的提交
 
 > git checkout -- file
+
 撤销工作区的修改
 
 如果已经把需要修改的内容提交到了暂存区 首先**git reset HEAD "file"**来清除暂存区
 然后使用**git checkout -- file**来丢弃工作区的修改
 
 > git remote add origin git@github.com:XXX
+
 添加远程仓库“origin” 这里的-u是制定上游(upstream)为origin
 
 > git push origin master
+
 向origin仓库提交我们的master分支
 
 > git checkout -b dev
+
 创建并且切换到dev分支 相当于
 > git branch dev
 > git checkout dev
 
+
 > git merge dev
+
 直接合并dev分支
 
 > git branch -d dev
+
 删除dev分支
 
 当合并分支发生冲突的时候 去文件里查看具体冲突的细节 然后add commit
 
 > git merge --no-ff -m "merge with no-ff" dev
+
 不采用"Fast forward"的方式合并分支 这样合并分支后 可以知道分支合并的信息
 > git log --graph --pretty=oneline --abbrev-commit
+
 以graph的形式查看分支合并情况
 
 > git remote
+
 查看远程仓库信息
 > git remote -v
+
 查看远程仓库更加详细的信息
 > git push origin XXX
+
 将XXX分支推送到origin中
 
 > git checkout -b dev origin/dev
+
 创建本地的dev分支 并且关联origin的dev
 
 > git branch --set-upstream branch-name  origin/branch-name
+
 建⽴本地分⽀和远程分⽀的关联，使⽤
 
 多⼈协作的⼯作模式通常是这样：
