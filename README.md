@@ -106,13 +106,28 @@ And I summarized what I learned.
 4. 没有冲突或者解决掉冲突后，再⽤git push origin branch-name推送就能成功！
 
 > git config --global alias.st status
+
 git的自定义操作 st是stats的别名 git st ==== git status 更加简单
 
 分享一下我的git配置
 > git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
+
 > git config --global alias.st status
+
+
 > git config --global alias.co checkout
+
+
 > git config --global alias.br branch
+
+
 > git config --global alias.cm 'commit -m'
+
+
 > git config --global alias.unstage 'reset HEAD'
+
+
 > git config --global alias.last 'log -1'
+
+
