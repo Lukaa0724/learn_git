@@ -51,11 +51,11 @@ And I summarized what I learned.
 
 > git remote add origin git@github.com:XXX
 
-添加远程仓库“origin” 这里的-u是制定上游(upstream)为origin
+添加远程仓库“origin” 
 
-> git push origin master
+> git push -u origin master
 
-向origin仓库提交我们的master分支
+这里的-u是制定上游(upstream)为origin  向origin仓库提交我们的master分支
 
 > git checkout -b dev
 
