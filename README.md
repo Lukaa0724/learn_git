@@ -131,3 +131,24 @@ git的自定义操作 st是stats的别名 git st ==== git status 更加简单
 > git config --global alias.last 'log -1'
 
 
+# 日常使用发现的一些问题
+
+> git branch -M main
+
+github希望我们用这样的指令 把当前的分支改名为main(master改名为main)
+由于我异性修改了快捷键 只需要**git br -M main**
+
+
+
+
+[显示隐藏的git目录](https://blog.csdn.net/baicha11/article/details/127700351)
+本来提交了一个100MB以上的大文件打算git push 结果不能 而后删除这个大文件 结果还是不能push 原因是删除后.git文件还是很大因此需要
+![](images/2024-03-02-19-59-50.png)
+具体的[教程](https://juejin.cn/post/6844903448627019789) 还有一种[方法](https://www.jianshu.com/p/780161d32c8e)
+(解决.git文件过大的问题)[https://blog.csdn.net/HOU_Zhe/article/details/115265834]
+我是菜鸡  为了解决这个问题，我使用了
+> rm -rf .git
+
+直接把git全删了 然后git init  git add .  git cm
+
+这个故事告诉我们 有大文件的时候 不要git add . 呜呜呜
